@@ -13,6 +13,12 @@ const SocialFollowersScreen = (params) => {
   const [frequentlyContacted, setFrequentlyContacted] = useState([]);
   const [followers, setFollowers] = useState([]);
   const [numFollowers, setNumFollowers] = useState(0);
+  /**
+   * Sets up initial data for frequently contacted users, followers, and the number of followers.
+   * This effect runs once when the component mounts.
+   * @param {void} None
+   * @returns {void} This effect doesn't return anything, it updates state variables.
+   */
   useEffect(() => {
     setFrequentlyContacted([
       {
