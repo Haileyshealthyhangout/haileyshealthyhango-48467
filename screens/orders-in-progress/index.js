@@ -11,6 +11,12 @@ import {
 const OrdersInProgress = () => {
   const [selectedTab, setSelectedTab] = useState(0);
   const [orders, setOrders] = useState([]);
+  /**
+   * Sets the initial orders state with an array of sample order objects.
+   * This effect runs only once when the component mounts.
+   * @param {void} - No parameters
+   * @returns {void} Does not return a value, but updates the orders state
+   */
   useEffect(() => {
     setOrders([
       {
