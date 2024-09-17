@@ -10,6 +10,23 @@ const isValid = slice => {
     "reducer",
     "getInitialState"
   ]
+  /**
+   * Checks if all properties of the slice object are included in the sliceProps array
+   * @param {Object} slice - The slice object to check
+   * @param {Array} sliceProps - An array of allowed property names
+   /**
+    /**
+     * Maps over an array of slices and extracts the 'slice' property from each slice's value.
+     * @param {Array} slices - An array of objects containing a 'value' property with a 'slice' sub-property.
+     * @returns {Array} A new array containing only the 'slice' values from each input object.
+     */
+    * Filters an array of slices based on the validity of their 'value.slice' property
+    * @param {Array} slices - An array of slice objects to filter
+    * @param {Function} isValid - A function that checks the validity of a slice
+    * @returns {Array} An array of slice objects that have a valid 'value.slice' property
+    */
+   * @returns {boolean} True if all properties of slice are included in sliceProps, false otherwise
+   */
   return Object.keys(slice).every(prop => sliceProps.includes(prop))
 }
 
