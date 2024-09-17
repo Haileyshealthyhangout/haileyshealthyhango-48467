@@ -1,8 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { Text, StyleSheet, View, Image, ScrollView } from "react-native";
 
+/**
+ * Renders a notifications listing screen component
+ * @param {Object} params - The parameters passed to the component
+ * @returns {JSX.Element} A view containing a header with tab view and options, and a scrollable list of notification tiles
+ */
 const NotificationsListingScreen = (params) => {
   const [notifications, setNotifications] = useState([]);
+  /**
+   * Sets up initial notifications in the component's state
+   * @param {void} None - This useEffect hook doesn't take any parameters
+   * @returns {void} This hook doesn't return anything, it updates the state
+   */
   useEffect(() => {
     setNotifications([
       {
@@ -67,6 +77,20 @@ const NotificationsListingScreen = (params) => {
       </View>
       <View style={styles.notificationsContainer}>
         <ScrollView showsVerticalScrollIndicator={false}>
+          /**
+           * Renders a list of notification tiles
+           * @param {Array} notifications - An array of notification objects to be rendered
+           * @returns {Array} An array of NotificationTile components
+           /**
+            * Renders a notification tile component
+            * @param {Object} notification - The notification object containing details to be displayed
+            * @param {string} notification.type - The type of the notification
+            * @param {string} notification.details - The details of the notification
+            * @param {string} notification.time - The time of the notification
+            * @param {boolean} notification.read - Indicates whether the notification has been read
+            * @returns {JSX.Element} A React Native component representing the notification tile
+            */
+           */
           {notifications.map((notification, index) => (
             <NotificationTile notification={notification} key={index} />
           ))}
@@ -131,6 +155,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#F2F2F2"
   },
+  /**
+   * Renders a tab view component with selectable tabs.
+   * @param {Object} props - The component props.
+   * @param {string[]} props.tabTitles - An array of strings representing the titles of the tabs.
+   * @param {number} props.selected - The index of the currently selected tab.
+   * @returns {JSX.Element} A View component containing the rendered tabs.
+   */
   header: {
     flex: 1.5,
     paddingVertical: 10,
@@ -158,6 +189,14 @@ export default NotificationsListingScreen;
 const TabView = ({ tabTitles, selected }) => {
   return (
     <View style={tabViewStyles.paletteContainer}>
+      ```
+      /**
+       * Renders a list of tab titles as View components with conditional styling
+       * @param {Array<string>} tabTitles - An array of strings representing the tab titles
+       * @param {number} selected - The index of the currently selected tab
+       * @returns {Array<JSX.Element>} An array of View components representing the tabs
+       */
+      ```
       {tabTitles.map((title, index) => (
         <View
           style={
