@@ -8,6 +8,15 @@ import {
   TextInput
 } from "react-native";
 
+/**
+ * Renders a video call details component with tabs, meeting information, and sharing options.
+ * @returns {JSX.Element} A React component displaying video call details, including icons, tabs, meeting information inputs, and a share button.
+ /**
+  * Sets the initial meeting details using the useEffect hook
+  * @param {Array} [] - An empty dependency array, ensuring the effect runs only once on component mount
+  * @returns {void} This effect does not return anything
+  */
+ */
 const VideoCallDetails = () => {
   const [selectedTab, setSelectedTab] = useState(0);
   const [meetingDetails, setMeetingDetails] = useState({});

@@ -5,6 +5,10 @@ import {
   StyleSheet, Image, ScrollView, Pressable
 } from "react-native";
 
+/**
+ * Renders the Subscription Details component
+ * @returns {JSX.Element} A ScrollView containing subscription information and upgrade option
+ */
 const SubscriptionDetails = () => {
   return (
     <ScrollView style={styles.container}>

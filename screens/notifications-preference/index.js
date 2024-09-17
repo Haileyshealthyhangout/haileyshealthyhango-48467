@@ -1,6 +1,11 @@
 import React from "react";
 import { Text, StyleSheet, View } from "react-native";
 
+/**
+ * Renders the Notification Preference Screen component.
+ * @param {Object} params - The parameters passed to the component.
+ * @returns {JSX.Element} A View component containing the Notification Preference Screen.
+ */
 const NotificationPreferenceScreen = (params) => {
   return (
     <View style={styles.container}>

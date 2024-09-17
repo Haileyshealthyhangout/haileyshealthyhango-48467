@@ -8,7 +8,15 @@ import {
   TouchableHighlight
 } from "react-native";
 
+/**
+ * Renders a social profile component with user information and gallery
+ * @returns {JSX.Element} A ScrollView containing the user's profile and gallery
+ */
 const SocialProfile = () => {
+  /**
+   * Logs "pressed" to the console when called.
+   * @returns {void} This function doesn't return a value.
+   */
   const pressed = () => {
     console.log("pressed");
   };

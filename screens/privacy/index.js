@@ -3,20 +3,104 @@ import { Text, StyleSheet, View, Image, Switch, ScrollView } from "react-native"
 
 const PrivacyScreen = () => {
   const [isEnabled, setIsEnabled] = useState(false);
+  /**
+   * Toggles the switch state.
+   * @param {void} - This function doesn't take any parameters.
+   * @returns {void} Updates the state internally without returning a value.
+   */
+  ```
+  /**
+   * Toggles the switch state.
+   * @param {void} - This function doesn't take any parameters.
+   * @returns {void} This function doesn't return a value, but updates the state using setIsEnabled.
+   */
+  ```
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
   const [isEnabled1, setIsEnabled1] = useState(false);
+  /**
+   * Toggles the state of the first switch
+   /**
+    * Toggles the state of switch 2.
+    * @param {void} - This function does not take any parameters.
+    * @returns {void} This function does not return a value. It updates the state using setIsEnabled2.
+    */
+   * @param {void} - This function doesn't take any parameters
+   * @returns {void} This function doesn't return a value, it updates state using setIsEnabled1
+   */
+  /**
+   * Toggles the state of switch 1
+   * @param {void} - This function doesn't take any parameters
+   * @returns {void} This function doesn't return a value, it updates state internally
+   */
   const toggleSwitch1 = () => setIsEnabled1(previousState => !previousState);
   const [isEnabled2, setIsEnabled2] = useState(false);
+  /**
+   * Toggles the state of switch 2
+   /**
+    * Toggles the state of switch 3
+    * @param {void} No parameters
+    * @returns {void} Updates the state of isEnabled3 by inverting its previous value
+    */
+   * @param {void} - This function doesn't take any parameters
+   * @returns {void} Updates the state of isEnabled2 by inverting its previous value
+   */
   const toggleSwitch2 = () => setIsEnabled2(previousState => !previousState);
   const [isEnabled3, setIsEnabled3] = useState(false);
+  ```
+  /**
+   * Toggles the state of switch 3
+   * @param {void} - This function doesn't take any parameters
+   * @returns {void} This function doesn't return a value, it updates state internally
+   */
+  ```
   const toggleSwitch3 = () => setIsEnabled3(previousState => !previousState);
   const [isEnabled4, setIsEnabled4] = useState(false);
+  /**
+   * Toggles the state of switch 4
+   * @param {void} - This function doesn't take any parameters
+   * @returns {void} Updates the state of isEnabled4 by inverting its previous value
+   */
+  /**
+   * Toggles the state of switch 4
+   * @param {void} - This function doesn't take any parameters
+   * @returns {void} Updates the state of isEnabled4 by inverting its previous value
+   */
   const toggleSwitch4 = () => setIsEnabled4(previousState => !previousState);
   const [isEnabled5, setIsEnabled5] = useState(false);
+  /**
+   * Toggles the state of switch 5
+   * @param {void} - This function doesn't take any parameters
+   * @returns {void} Updates the state of isEnabled5 by negating its previous value
+   */
+  /**
+   * Toggles the state of switch 5
+   /**
+    * Toggles the state of switch 6
+    * @param {void} - This function doesn't take any parameters
+    * @returns {void} Updates the state of isEnabled6 by inverting its previous value
+    */
+   * @param {void} - This function doesn't take any parameters
+   * @returns {void} This function doesn't return a value, it updates state internally
+   /**
+    * Toggles the state of switch 7
+    * @param {void} - This function doesn't take any parameters
+    * @returns {void} Updates the state of isEnabled7 by inverting its previous value
+    */
+   */
   const toggleSwitch5 = () => setIsEnabled5(previousState => !previousState);
   const [isEnabled6, setIsEnabled6] = useState(false);
+  /**
+   * Toggles the state of switch 6
+   * @param {void} - This function doesn't take any parameters
+   * @returns {void} This function doesn't return a value, it updates state internally
+   */
   const toggleSwitch6 = () => setIsEnabled6(previousState => !previousState);
   const [isEnabled7, setIsEnabled7] = useState(false);
+  /**
+   * Toggles the state of switch 7
+   * @param {void} - This function doesn't take any parameters
+   * @returns {void} Updates the state of isEnabled7 by inverting its previous value
+   */
   const toggleSwitch7 = () => setIsEnabled7(previousState => !previousState);
   return (
     <ScrollView style={styles.container}>

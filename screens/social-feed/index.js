@@ -3,6 +3,11 @@ import { Text, StyleSheet, View, ScrollView, Image } from "react-native";
 
 const PostsFeedScreen = params => {
   const [posts, setPosts] = useState([]);
+  /**
+   * Sets initial posts data when the component mounts
+   * @param {void} None - This useEffect hook doesn't take any parameters
+   * @returns {void} This hook doesn't return anything, it updates the state
+   */
   useEffect(() => {
     setPosts([
       {

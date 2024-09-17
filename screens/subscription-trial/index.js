@@ -9,6 +9,10 @@ import {
   Image
 } from "react-native";
 
+/**
+ * Renders a subscription trial component with options for a free trial period or custom date selection.
+ * @returns {JSX.Element} A React component displaying subscription trial options and input fields.
+ */
 const SubscriptionTrial = () => {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");

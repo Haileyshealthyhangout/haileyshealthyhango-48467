@@ -12,6 +12,11 @@ import {
 const RewardsHistory = () => {
   const [reward, setReward] = useState({});
   const [rewardsHistory, setRewardsHistory] = useState([]);
+  /**
+   * Initializes reward and rewards history data when the component mounts
+   * @param {void} - This useEffect hook doesn't take any parameters
+   * @returns {void} This effect doesn't return anything, it updates state
+   */
   useEffect(() => {
     setReward({
       name: "Reward name",
@@ -94,6 +99,11 @@ const RewardsHistory = () => {
             <View style={styles.flexRow}>
               <Text style={styles.green}>Newest</Text>
               <Image
+                /**
+                 * Renders a list of reward items from the rewardsHistory array
+                 * @param {Array} rewardsHistory - An array of reward objects containing title, date, time, and points
+                 * @returns {JSX.Element} A mapped array of View components representing each reward item
+                 */
                 source={require("./assets/dropdownIcon.png")}
                 style={styles.dropdownIcon}
               />
