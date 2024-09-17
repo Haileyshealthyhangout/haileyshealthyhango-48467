@@ -1,10 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { Text, StyleSheet, View, Image, FlatList } from "react-native";
 
+/**
+ * Renders a Payment Split Screen component
+ * @param {Object} params - The parameters passed to the component (unused in this implementation)
+ * @returns {JSX.Element} A view containing account balance, bank account details, and a list of users who owe or are owed money
+ */
 const PaymentSplitScreen = (params) => {
   const [accountBalance, setAccountBalance] = useState(0);
   const [bankAccount, setBankAccount] = useState("");
   const [users, setUsers] = useState([]);
+  /**
+   * Initializes user data, account balance, and bank account information on component mount
+   * @param {void} None - This effect does not take any parameters
+   * @returns {void} This effect does not return anything
+   */
   useEffect(() => {
     setUsers([
       {
@@ -59,7 +69,29 @@ const PaymentSplitScreen = (params) => {
       </View>
       <FlatList
         data={users}
+        ```
+        /**
+         * Extracts a unique key for each item in a list
+         * @param {Object} item - The current item being processed
+         * @param {number} index - The index of the current item in the list
+         * @returns {string} A unique string identifier for the item
+         */
+        ```
         keyExtractor={(item, index) => item.id.toString()}
+        /**
+         * Renders an individual user item in a list
+         * @param {Object} options - The options object
+         * @param {Object} options.item - The user item data to be rendered
+         * @returns {React.Component} A User component with the provided user data
+         */
+        /**
+         * Renders a user component displaying profile image, name, and amount.
+         * @param {Object} user - The user object containing profile information.
+         * @param {string} user.name - The name of the user.
+         * @param {number} user.amount - The amount associated with the user.
+         * @param {Object} user.profileImage - The source object for the user's profile image.
+         * @returns {JSX.Element} A React Native component representing the user information.
+         */
         renderItem={({ item }) => <User user={item} />}
       />
     </View>
@@ -147,6 +179,19 @@ const styles = StyleSheet.create({
 });
 export default PaymentSplitScreen;
 
+/**
+ * Renders a tab view component with selectable tabs
+ * @param {Object} props - The component props
+ /**
+  * Renders a series of tab titles as Views with conditional styling
+  * @param {Array<string>} tabTitles - An array of strings representing the titles of the tabs
+  * @param {number} selected - The index of the currently selected tab
+  * @returns {Array<JSX.Element>} An array of View components representing the tab titles
+  */
+ * @param {string[]} props.tabTitles - An array of tab titles to display
+ * @param {number} props.selected - The index of the currently selected tab
+ * @returns {JSX.Element} A View component containing the rendered tab view
+ */
 const TabView = ({ tabTitles, selected }) => {
   return (
     <View style={tabViewStyles.paletteContainer}>
