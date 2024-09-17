@@ -1,6 +1,14 @@
 import * as React from "react";
 import { Text, View, TextInput, TouchableHighlight, StyleSheet } from "react-native";
 
+/**
+ * Logs a message to the console when pressed.
+ * @returns {void} This function doesn't return anything.
+ */
+/**
+ * Renders a Token component for user verification
+ * @returns {JSX.Element} A view containing a token verification interface with input fields for a 4-digit PIN
+ */
 const pressed = () => {
   console.log("pressed");
 };
