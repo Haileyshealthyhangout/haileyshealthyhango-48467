@@ -13,6 +13,11 @@ const OrderDetails = () => {
   const [productList, setProductList] = useState([]);
   const [promoCode, setPromoCode] = useState("");
   const [cardNumber, setCardNumber] = useState("");
+  /**
+   * Sets the initial product list in the component's state
+   * @param {void} - No parameters
+   * @returns {void} This effect does not return anything
+   */
   useEffect(() => {
     setProductList([
       {
