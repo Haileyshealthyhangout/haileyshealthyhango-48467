@@ -3,6 +3,12 @@ import { Text, StyleSheet, View, FlatList, Image } from "react-native";
 
 const ProductRecommendationScreen = (params) => {
   const [products, setProducts] = useState([]);
+  /**
+   * Sets the initial products state with an array of product objects.
+   * This effect runs once when the component mounts.
+   * @param {void} No parameters
+   * @returns {void} No return value
+   */
   useEffect(() => {
     setProducts([
       {
@@ -86,6 +92,12 @@ const styles = StyleSheet.create({
   },
   productsContainer: {
     paddingHorizontal: 20
+  /**
+   * Renders a series of tab views based on the provided tab titles
+   * @param {Array<string>} tabTitles - An array of strings representing the titles of the tabs
+   * @param {number} selected - The index of the currently selected tab
+   * @returns {Array<React.Element>} An array of View components representing the tabs
+   */
   }
 });
 export default ProductRecommendationScreen;
